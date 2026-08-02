@@ -66,6 +66,58 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  position: relative;
+  isolation: isolate;
+}
+
+.app::before,
+.app::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.app::before {
+  top: -30vmax;
+  left: -24vmax;
+  width: 72vmax;
+  height: 72vmax;
+  background: radial-gradient(circle at 44% 44%, rgba(192, 223, 134, 0.08), rgba(225, 232, 212, 0.09) 48%, transparent 72%);
+  filter: blur(12px);
+  animation: ambientDrift 22s ease-in-out infinite alternate;
+}
+
+.app::after {
+  right: -25vmax;
+  bottom: -32vmax;
+  width: 68vmax;
+  height: 68vmax;
+  background: radial-gradient(circle at 52% 48%, rgba(161, 92, 56, 0.08), rgba(107, 112, 92, 0.08) 48%, transparent 72%);
+  filter: blur(14px);
+  animation: ambientDriftReverse 26s ease-in-out infinite alternate;
+}
+
+@keyframes ambientDrift {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(7%, 5%, 0) scale(1.06); }
+}
+
+@keyframes ambientDriftReverse {
+  from { transform: translate3d(2%, 3%, 0) scale(1.04); }
+  to { transform: translate3d(-7%, -5%, 0) scale(0.97); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app::before,
+  .app::after {
+    animation: none;
+  }
+}
+
 /* Typography */
 h1,
 h2,
