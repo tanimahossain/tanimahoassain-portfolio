@@ -79,7 +79,9 @@ const Home = () => {
                         <p className="hero-greeting">{personalData.hero.greeting}</p>
                         <h1 className="hero-name">{personalData.name}</h1>
                         <p className="hero-title">{personalData.title}</p>
-                        <p className="hero-description">{personalData.hero.description}</p>
+                        {personalData.hero.description && (
+                            <p className="hero-description">{personalData.hero.description}</p>
+                        )}
                         <div className="hero-actions">
                             <Button href={personalData.resume.downloadLink}>Download Resume</Button>
                             <Button variant="secondary" to="/experience">View Experience</Button>

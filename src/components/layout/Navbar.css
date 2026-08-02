@@ -11,7 +11,7 @@
 }
 
 .navbar-container {
-    max-width: var(--container-max);
+    width: 100%;
     margin: 0 auto;
     padding: var(--spacing-sm) var(--container-padding);
     display: flex;
