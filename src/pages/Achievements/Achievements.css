@@ -1,0 +1,134 @@
+.achievements-page {
+    padding-top: 0;
+}
+
+/* Awards Timeline */
+.awards-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.award-card {
+    width: 100%;
+}
+
+.award-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.award-year {
+    flex-shrink: 0;
+    color: var(--color-accent);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.award-year-mobile {
+    display: none;
+    color: var(--color-accent);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 600px) {
+    .award-year {
+        display: none;
+    }
+
+    .award-year-mobile {
+        display: block;
+    }
+}
+
+.award-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.award-org {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.award-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.cert-name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.cert-org {
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cert-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+    border-top: 1px solid rgba(195, 166, 160, 0.2);
+    border-bottom: 1px solid rgba(195, 166, 160, 0.2);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cert-year {
+    font-weight: 500;
+}
+
+.cert-id {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    font-family: monospace;
+}
+
+.cert-verify {
+    margin-top: var(--spacing-xs);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .award-item {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .award-year-badge {
+        width: auto;
+        position: static;
+        align-self: flex-start;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,237 @@
+.cp-page {
+    padding-top: 0;
+}
+
+/* Individual Contests Grid */
+.contests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.contest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contest-name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.contest-year {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.contest-rank {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contest-round {
+    font-weight: 500;
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contest-description {
+    color: var(--color-text);
+    opacity: 0.85;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Team Contests List */
+.team-contests-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 100%;
+}
+
+.team-contest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-contest-name {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.team-name {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin: 0;
+}
+
+.team-contest-meta {
+    text-align: right;
+}
+
+.team-rank {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+}
+
+.team-year {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.team-location {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Problem Setting Grid */
+.problem-setting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.ps-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.ps-role {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: fit-content;
+    max-width: 100%;
+    padding: 4px 12px;
+    background-color: rgba(195, 166, 160, 0.2);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.ps-year {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.ps-event {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.ps-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Training List */
+.training-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 800px;
+}
+
+.training-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.training-program {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.training-org {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin: 0;
+}
+
+.training-meta {
+    text-align: right;
+}
+
+.training-role {
+    display: block;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.training-year {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.training-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .contests-grid,
+    .problem-setting-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-contest-header,
+    .training-header {
+        flex-direction: column;
+    }
+
+    .team-contest-meta,
+    .training-meta {
+        text-align: left;
+        display: flex;
+        gap: var(--spacing-md);
+    }
+}

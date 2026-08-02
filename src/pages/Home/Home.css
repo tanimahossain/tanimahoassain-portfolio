@@ -1,0 +1,350 @@
+/* Hero Section */
+.hero-section {
+    min-height: calc(100vh - 320px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-2xl) 0;
+}
+
+.hero-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.hero-greeting {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+}
+
+.hero-name {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.1;
+}
+
+.hero-title {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: var(--spacing-lg);
+    white-space: nowrap;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.85;
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* About Section */
+.about-section {
+    padding: var(--spacing-2xl) 0;
+    background-color: #eaeee2;
+}
+
+.about-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.about-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Education Timeline */
+.education-timeline {
+    --timeline-point-size: 14px;
+    --education-progress: 0;
+    --education-track-height: calc(100% - var(--timeline-point-size));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: calc(var(--timeline-point-size) + var(--spacing-xl));
+}
+
+.education-timeline-track {
+    position: absolute;
+    top: calc(var(--timeline-point-size) / 2);
+    left: calc((var(--timeline-point-size) - 3px) / 2);
+    width: 3px;
+    height: var(--education-track-height);
+    overflow: hidden;
+    background-color: var(--color-ui);
+    border-radius: 999px;
+}
+
+.education-timeline-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    border-radius: inherit;
+    transform: scaleY(var(--education-progress));
+    transform-origin: top;
+    will-change: transform;
+}
+
+.education-timeline-item {
+    position: relative;
+    min-height: var(--timeline-point-size);
+}
+
+.education-timeline-point {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (var(--timeline-point-size) + var(--spacing-xl)));
+    z-index: 1;
+    width: var(--timeline-point-size);
+    height: var(--timeline-point-size);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-secondary);
+    border-radius: 50%;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.education-timeline-item.is-reached .education-timeline-point {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(161, 92, 56, 0.14);
+    transform: scale(1.1);
+}
+
+.education-timeline-content {
+    padding-bottom: var(--spacing-sm);
+}
+
+.education-timeline-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.education-degree {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.education-field {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.education-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.education-institution {
+    font-weight: 600;
+}
+
+.education-period {
+    color: var(--color-text);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.education-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-sm);
+}
+
+.education-achievements {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.education-achievements li {
+    position: relative;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.85;
+}
+
+.education-achievements li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+}
+
+/* Experience Preview */
+.experience-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.experience-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.experience-period {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.experience-company {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.section-cta {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* Honors Preview */
+.honors-preview-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 100%;
+}
+
+.honor-item {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-medium);
+}
+
+.honor-item:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+}
+
+.honor-year {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    min-width: 80px;
+}
+
+.honor-content {
+    flex: 1;
+}
+
+.honor-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.honor-org {
+    color: var(--color-text);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.8rem;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+        white-space: normal;
+    }
+
+    .experience-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-timeline {
+        gap: var(--spacing-xl);
+        padding-left: calc(var(--timeline-point-size) + var(--spacing-md));
+    }
+
+    .education-timeline-point {
+        left: calc(-1 * (var(--timeline-point-size) + var(--spacing-md)));
+    }
+
+    .education-meta {
+        flex-direction: column;
+    }
+}

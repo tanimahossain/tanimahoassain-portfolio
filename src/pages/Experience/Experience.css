@@ -1,0 +1,294 @@
+.experience-page {
+    padding-top: 0;
+}
+
+/* Professional Timeline */
+.professional-timeline {
+    position: relative;
+    max-width: 100%;
+}
+
+.timeline-item {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 3px solid var(--color-background);
+    box-shadow: 0 0 0 3px var(--color-accent);
+    z-index: 1;
+}
+
+.timeline-line {
+    width: 2px;
+    flex: 1;
+    background-color: var(--color-ui);
+    margin-top: var(--spacing-sm);
+}
+
+.timeline-card {
+    flex: 1;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.exp-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.exp-company {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.exp-meta {
+    text-align: right;
+}
+
+.exp-period {
+    display: block;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.exp-location {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.exp-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-md);
+}
+
+.exp-responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.exp-responsibilities li {
+    position: relative;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+    opacity: 0.85;
+}
+
+.exp-responsibilities li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.exp-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: rgba(195, 166, 160, 0.2);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    color: var(--color-text);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.skill-category-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    font-weight: 500;
+}
+
+.skill-level {
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    border-radius: var(--radius-sm);
+}
+
+.skill-level--expert {
+    background-color: rgba(161, 92, 56, 0.15);
+    color: var(--color-accent);
+}
+
+.skill-level--advanced {
+    background-color: rgba(195, 166, 160, 0.3);
+    color: var(--color-text);
+}
+
+.skill-level--intermediate {
+    background-color: rgba(195, 166, 160, 0.2);
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+/* Speaking Grid */
+.speaking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.talk-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.talk-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.talk-event {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.talk-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+.talk-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Volunteering List */
+.volunteering-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 100%;
+}
+
+.vol-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.vol-role {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.vol-org {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin: 0;
+}
+
+.vol-period {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.vol-description {
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-marker {
+        display: none;
+    }
+
+    .timeline-item {
+        gap: 0;
+    }
+
+    .exp-header,
+    .vol-header {
+        flex-direction: column;
+    }
+
+    .exp-meta {
+        text-align: left;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
