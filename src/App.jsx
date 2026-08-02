@@ -10,10 +10,6 @@ import Achievements from './pages/Achievements/Achievements';
 import Contact from './pages/Contact/Contact';
 import './App.css';
 
-const routerBase = window.location.hostname === 'tanimahossain.github.io'
-  ? '/tanimahoassain-portfolio'
-  : '/';
-
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -36,7 +32,7 @@ const PageWrapper = ({ children }) => {
 
 function App() {
   return (
-    <Router basename={routerBase}>
+    <Router>
       <div className="app">
         <ScrollToTop />
         <Navbar />
